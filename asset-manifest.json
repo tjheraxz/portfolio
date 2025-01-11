@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/tjheraxz/portfolio/static/css/main.9b88e051.css",
-    "main.js": "/tjheraxz/portfolio/static/js/main.bf41eae1.js",
-    "static/media/audio.mp3": "/tjheraxz/portfolio/static/media/audio.25f2d600f2bf4b6d29fb.mp3",
-    "static/media/background.gif": "/tjheraxz/portfolio/static/media/background.38c532782a4afb371ca0.gif",
-    "static/media/isyaratku.png": "/tjheraxz/portfolio/static/media/isyaratku.4555e53c62f043e2aa02.png",
-    "static/media/Todolist.png": "/tjheraxz/portfolio/static/media/Todolist.7004bec96549af8fe827.png",
-    "static/media/absolutepeakness.png": "/tjheraxz/portfolio/static/media/absolutepeakness.93890fc701abfb8b267c.png",
-    "static/media/taskmate.png": "/tjheraxz/portfolio/static/media/taskmate.2b3f3c2c8591ec8f8cad.png",
-    "static/media/fruitshooter.png": "/tjheraxz/portfolio/static/media/fruitshooter.f4102ed8773e88ab1679.png",
-    "static/media/TerasSedap.png": "/tjheraxz/portfolio/static/media/TerasSedap.77649f82921f88f2bf06.png",
-    "static/media/poig.png": "/tjheraxz/portfolio/static/media/poig.7e1bf3417940bf869966.png",
-    "static/media/furina.png": "/tjheraxz/portfolio/static/media/furina.2e38452bd8c81d85651b.png",
-    "static/media/certificate1.jpg": "/tjheraxz/portfolio/static/media/certificate1.231e766660ba3fcce51e.jpg",
-    "static/media/certificate2.jpg": "/tjheraxz/portfolio/static/media/certificate2.a1839841b13786e71e57.jpg",
-    "index.html": "/tjheraxz/portfolio/index.html",
-    "main.9b88e051.css.map": "/tjheraxz/portfolio/static/css/main.9b88e051.css.map",
-    "main.bf41eae1.js.map": "/tjheraxz/portfolio/static/js/main.bf41eae1.js.map"
+    "main.css": "/portfolio/static/css/main.aea7e28f.css",
+    "main.js": "/portfolio/static/js/main.93b86164.js",
+    "static/media/audio.mp3": "/portfolio/static/media/audio.25f2d600f2bf4b6d29fb.mp3",
+    "static/media/background.gif": "/portfolio/static/media/background.38c532782a4afb371ca0.gif",
+    "static/media/isyaratku.png": "/portfolio/static/media/isyaratku.4555e53c62f043e2aa02.png",
+    "static/media/Todolist.png": "/portfolio/static/media/Todolist.7004bec96549af8fe827.png",
+    "static/media/absolutepeakness.png": "/portfolio/static/media/absolutepeakness.93890fc701abfb8b267c.png",
+    "static/media/taskmate.png": "/portfolio/static/media/taskmate.2b3f3c2c8591ec8f8cad.png",
+    "static/media/fruitshooter.png": "/portfolio/static/media/fruitshooter.f4102ed8773e88ab1679.png",
+    "static/media/TerasSedap.png": "/portfolio/static/media/TerasSedap.77649f82921f88f2bf06.png",
+    "static/media/poig.png": "/portfolio/static/media/poig.7e1bf3417940bf869966.png",
+    "static/media/furina.png": "/portfolio/static/media/furina.2e38452bd8c81d85651b.png",
+    "static/media/certificate1.jpg": "/portfolio/static/media/certificate1.231e766660ba3fcce51e.jpg",
+    "static/media/certificate2.jpg": "/portfolio/static/media/certificate2.a1839841b13786e71e57.jpg",
+    "index.html": "/portfolio/index.html",
+    "main.aea7e28f.css.map": "/portfolio/static/css/main.aea7e28f.css.map",
+    "main.93b86164.js.map": "/portfolio/static/js/main.93b86164.js.map"
   },
   "entrypoints": [
-    "static/css/main.9b88e051.css",
-    "static/js/main.bf41eae1.js"
+    "static/css/main.aea7e28f.css",
+    "static/js/main.93b86164.js"
   ]
 }
