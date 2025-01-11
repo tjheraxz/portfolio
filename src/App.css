@@ -1,0 +1,143 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+html, body {
+  height: 100%; /* Ensure full viewport height */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  overflow: hidden; /* Prevent scrolling */
+}
+
+.background {
+  background-image: url('./Components/Images/background.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%; /* Full height */
+  width: 100%;
+  box-sizing: border-box; /* Include the border in the element's dimensions */
+  position: relative;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.scrolling-text-container {
+  position: relative; /* Ensures the text container has a positioning context */
+  width: 100%; /* Full width of the container */
+  height: 50px; /* Fixed height for the container */
+  overflow: hidden; /* Hide text that moves outside the container */
+  top: 50px;
+}
+
+.scrolling-text {
+  position: absolute; /* Remove from document flow */
+  white-space: nowrap; /* Prevent the text from wrapping */
+  animation: scroll-left 15s linear infinite; /* Animation to move the text */
+  font-size: 1rem; /* You can adjust the size as needed */
+  font-family: 'Press Start 2P', sans-serif; /* Example pixel font */
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%); /* Start at the right side */
+  }
+  100% {
+    transform: translateX(-100%); /* End at the left side */
+  }
+}
+
+.music-toggle-btn,
+.summon-pet-btn {
+  position: absolute;
+  top: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-family: 'Press Start 2P', sans-serif;
+  background-color: #282c34;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000; /* Ensure it stays above other content */
+}
+
+.music-toggle-btn {
+  right: 100px; /* Position the music button on the left */
+}
+
+.summon-pet-btn {
+  right: 10px; /* Position the pet button next to the music button */
+}
+
+.music-toggle-btn:hover,
+.summon-pet-btn:hover {
+  background-color: #61dafb;
+}
+
+/* Pet Image Styling */
+.pet {
+  position: absolute;
+  width: 50px; /* Adjust size as needed */
+  height: 50px; /* Adjust size as needed */
+  object-fit: contain;
+  animation: fall-down 10s ease-out forwards, walk-across 25s linear infinite;
+  transition: transform 0.2s ease-out;
+  animation-delay: 0s, 10s; /* Keep the delay for the walking animation */
+}
+
+/* Falling Animation */
+@keyframes fall-down {
+  0% {
+    top: -50px; /* Start falling from above */
+  }
+  100% {
+    top: calc(100vh - 50px); /* Stop at the bottom of the screen */
+  }
+}
+
+/* Walking Animation - Move across the entire screen */
+@keyframes walk-across {
+  0% {
+    transform: translateX(0); /* Start from the initial position */
+  }
+  50% {
+    transform: translateX(calc(100vw - 100px)); /* Stop at the edge of the viewport */
+  }
+  100% {
+    transform: translateX(0); /* Return to the start */
+  }
+}
