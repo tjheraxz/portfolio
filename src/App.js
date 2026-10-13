@@ -1,44 +1,61 @@
+
 import React, { useState, useRef } from 'react';
 import './App.css';
 import Main from './Components/main';
-import audioFile from './Components/audio/audio.mp3'; // Import the audio file
-import petImage from './Components/Images/furina.png'; // Import the pet image
+import audioFile from './Components/audio/audio.mp3';
+import summonSoundFile from './Components/audio/Jaja~.ogg';
+import petImage from './Components/Images/furina.png';
 
 function App() {
-  const [isPlaying, setIsPlaying] = useState(false); // Music state
-  const [pets, setPets] = useState([]); // State to hold summoned pets
-  const audioRef = useRef(new Audio(audioFile)); // Audio reference
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [pets, setPets] = useState([]);
+  const audioRef = useRef(new Audio(audioFile));
+
   audioRef.current.volume = 0.8;
 
   const toggleMusic = () => {
     if (isPlaying) {
-      audioRef.current.pause(); // Pause the audio
+      audioRef.current.pause();
     } else {
-      audioRef.current.play(); // Play the audio
+      audioRef.current.play();
     }
-    setIsPlaying(!isPlaying); // Toggle play state
+
+    setIsPlaying(!isPlaying);
   };
 
   const summonPet = () => {
-    const background = document.querySelector('.background'); // Get the background element
-    const backgroundRect = background.getBoundingClientRect(); // Get its dimensions and position
-  
-    // Generate a random x position within the .background bounds
-    const petLeft = Math.random() * (backgroundRect.width - 50); // Subtract pet width to keep it inside
+    // Play summon sound
+    const summonSound = new Audio(summonSoundFile);
+    summonSound.play();
+
+    // Get the visible screen dimensions
+    const screenWidth = window.innerWidth;
+
+    // Pet dimensions (adjust if your image is larger)
+    const petWidth = 50;
+
+    // Calculate a random horizontal position within the screen
+    const maxLeft = Math.max(0, screenWidth - petWidth);
+    const petLeft = Math.random() * maxLeft;
+
+    // Create the new pet
     const newPet = {
       id: Date.now(),
-      left: petLeft, // Relative to the .background
-      top: -50, // Start above the top of .background
-      delay: `10s`, // Random delay between 2 and 5 seconds
+      left: petLeft,
+      top: -50,
+      delay: '10s',
     };
-  
-    setPets([...pets, newPet]);
+
+    setPets((previousPets) => [...previousPets, newPet]);
   };
+
   return (
     <div className="background">
       {/* Scrolling Text */}
       <div className="scrolling-text-container">
-        <p className="scrolling-text">Welcome To my Portfolio, feel free to stay as long as you like! I hope you enjoy your stay here</p>
+        <p className="scrolling-text">
+          Welcome To my Portfolio, feel free to stay as long as you like! I hope you enjoy your stay here
+        </p>
       </div>
 
       {/* Main Content */}
@@ -58,20 +75,21 @@ function App() {
 
       {/* Render Summoned Pets */}
       {pets.map((pet) => (
-  <img
-    key={pet.id}
-    src={petImage}
-    alt="Pet"
-    className="pet"
-    style={{
-      left: `${pet.left}px`,
-      top: `${pet.top}px`,
-      animationDelay: `0s, ${pet.delay}`, // Apply the random delay
-    }}
-  />
-))}
+        <img
+          key={pet.id}
+          src={petImage}
+          alt="Pet"
+          className="pet"
+          style={{
+            left: `${pet.left}px`,
+            top: `${pet.top}px`,
+            animationDelay: `0s, ${pet.delay}`,
+          }}
+        />
+      ))}
     </div>
   );
 }
 
 export default App;
+

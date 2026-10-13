@@ -31,9 +31,13 @@ const Skill = () => {
         </div>
         {/* Game Engine Section */}
         <div className="skill-box">
-          <h3>Game Engine</h3>
+          <h3>Game Engine & creative tools</h3>
           <ul>
             <li>Unity</li>
+            <li>Figma</li>
+            <li>Canva</li>
+            <li>Unreal Engine 5</li>
+            <li>Blender</li>
           </ul>
         </div>
       </div>

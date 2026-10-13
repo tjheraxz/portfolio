@@ -8,6 +8,12 @@ const experiences = [
     description: 'became a committee member of G2X(Game Development Clube game expo) and was in charge of the preparation for the seminar.',
     duration: 'July 2024 - Oct 2024',
   },
+  {
+    title: 'IDS gamedev bootcamp',
+    company: ' International Design School(IDS) ',
+    description: 'join the bootcamp as a participant in an 8 month program where they teach new game developers on how to code using unreal engine and create 3D models using blender.',
+    duration: 'august 2025 - february 2026',
+  }
 ];
 
 const Experience = () => {

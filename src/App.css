@@ -66,7 +66,7 @@ html, body {
 .scrolling-text {
   position: absolute; /* Remove from document flow */
   white-space: nowrap; /* Prevent the text from wrapping */
-  animation: scroll-left 15s linear infinite; /* Animation to move the text */
+  animation: scroll-left 20s linear infinite; /* Animation to move the text */
   font-size: 1rem; /* You can adjust the size as needed */
   font-family: 'Press Start 2P', sans-serif; /* Example pixel font */
 }
@@ -110,13 +110,19 @@ html, body {
 
 /* Pet Image Styling */
 .pet {
-  position: absolute;
-  width: 50px; /* Adjust size as needed */
-  height: 50px; /* Adjust size as needed */
+  
   object-fit: contain;
   animation: fall-down 10s ease-out forwards, walk-across 25s linear infinite;
   transition: transform 0.2s ease-out;
   animation-delay: 0s, 10s; /* Keep the delay for the walking animation */
+  position: fixed;
+  width: 50px;
+  height: auto;
+  z-index: 100;
+  pointer-events: none;
+  max-width: 12vw;
+  box-sizing: border-box;
+
 }
 
 /* Falling Animation */

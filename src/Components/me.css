@@ -32,12 +32,12 @@
   right: 0;
   bottom: 0;
   object-fit: cover;
-  transition: opacity 200s ease-out;
+  transition: opacity 800s ease-out;
 }
 
 .photo-second {
   opacity: 0;
-  transition: opacity 200s ease-out;
+  transition: opacity 800s ease-out;
   z-index: 2;
 }
 

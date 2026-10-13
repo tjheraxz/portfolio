@@ -10,7 +10,7 @@ const Me = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowSecondImage(true); // Show the second image
-    }, 5000);
+    }, 30000);
 
     return () => clearTimeout(timer); // Cleanup timer on unmount
   }, []);
@@ -34,11 +34,11 @@ const Me = () => {
       <div className="about-me-text">
         <h1>About Me</h1>
         <p>
-          Hello! I'm Nicolas Temawan, an Informatics student at Multimedia Nusantara. 
+          Hello! I'm Nicolas Temawan, a Graduate of Informatics at Multimedia Nusantara. 
           I have experience in front-end development using HTML, CSS, JavaScript, and React, 
           as well as back-end development with Java, C, and Kotlin. My expertise extends to mobile development, 
-          particularly in building Android applications using Kotlin and XML. Additionally, 
-          I have a strong background in game development, having created engaging projects using Unity.
+          particularly in building Android applications using Kotlin and XML. I also have expirience in designing UI/UX 
+          for both mobile and also web. Additionally, I also have a background in game development, having created engaging projects using Unity & Unreal Engine 5.
         </p>
       </div>
     </div>
