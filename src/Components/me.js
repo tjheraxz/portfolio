@@ -6,7 +6,7 @@ import hehe from './Images/absolutepeakness.png'; // The second image
 const Me = () => {
   const [showSecondImage, setShowSecondImage] = useState(false);
 
-  // Change image visibility after 5 seconds/////
+  // Change image visibility after 5 seconds////////
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowSecondImage(true); // Show the second image
